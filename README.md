@@ -7,7 +7,7 @@
 explore bikeshare data
 
 ### Description
-interactive tool to explore statistical anaysis of bikeshare systems in chicago, washington and new york
+interactive tool to explore statistical anaysis of bikeshare systems in chicago, washington and new york city
 
 ### Files used
 bikeshare_2.py
