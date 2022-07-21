@@ -117,7 +117,7 @@ def time_stats(df):
     popular_hour = df['hour'].mode()[0]
     
     print('Most Common Month:', month_name)
-    print('Most Common Day of the Week:', popular_day)
+    print('Most Common weekday:', popular_day)
     print('Most Common Start Hour:', popular_hour)
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -140,8 +140,6 @@ def station_stats(df):
     print('Most Common End Station:', popular_end)
 
     # display most frequent combination of start station and end station trip
-   # df['start_end']= df['Start Station']+ df['End Station']
-   # start_end = df['start_end'].value_counts().idxmax()
     start_end = df.groupby(['Start Station', 'End Station']).size().idxmax()
 
     print('most popular trip:', start_end)
