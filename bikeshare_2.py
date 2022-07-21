@@ -139,7 +139,7 @@ def station_stats(df):
     popular_end = df['End Station'].value_counts().idxmax()
     print('Most Common End Station:', popular_end)
 
-    # display most frequent combination of start station and end station trip
+    # display most frequent trip
     start_end = df.groupby(['Start Station', 'End Station']).size().idxmax()
 
     print('most popular trip:', start_end)
